@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --primaty-color: rgba(104, 104, 104, 0.76);
+    --secondary-color: rgba(255, 250, 250, 0.795);
+}
+body {
+    font-family: 'Roboto' sans-serif;
+    margin: 0;
+}
+/* HOME */
+#home {
+    background-color: var(--primaty-color);
+    padding: 15px 20px;
+    height: 700px;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guotes, .img {
+    display: flex;
+    padding: 20px;
+}
+
+.img {
+    flex-direction: column;
+}
+
+blockquote {
+    font-weight: 20;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+blockquote figcaption {
+    text-align: right;
+}
+
+img{
+    border: none;
+    width: 400px;
+    height: 300px;
+}
+
+/* BIOGRAPHY */
+#biography {
+    background-color: var(--secondary-color);
+    font-size: 1.2rem;
+    font-weight: 100;
+    padding: 5% 20%;
+    margin: 0 auto;
+}
+.biography .title{ 
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+/* ART */
+#art{
+  background-color: black;
+  font-weight: 100;
+  font-size: 1.2rem;
+  padding: 10% 20%;
+  margin: 0 auto;
+}
+
+.art .title{ 
+    color: #fff;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.art iframe {
+    width: 100%;
+    height: 450px;
+}
