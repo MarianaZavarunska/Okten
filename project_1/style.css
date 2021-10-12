@@ -42,6 +42,7 @@ blockquote {
 
 blockquote figcaption {
     text-align: right;
+    padding-top: 0.85rem;
 }
 
 img{
