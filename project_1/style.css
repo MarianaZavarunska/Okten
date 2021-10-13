@@ -40,6 +40,10 @@ blockquote {
     font-size: 1.2rem;
 }
 
+h1, h3 {
+    font-size: 20px;
+}
+
 blockquote figcaption {
     text-align: right;
     padding-top: 0.85rem;
