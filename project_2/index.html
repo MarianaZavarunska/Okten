@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="form">
+        <form action="#" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>
+                    <p>Survey Form</p>
+                    <p>Thanks for helping us to improve our community for creating start-ups!</p>
+                </legend>
+                <div class="w-100">
+                    <label for="name">Name</label>
+                    <input tabindex="1" type="text" id="name" placeholder="Enter your name" required>
+                    <label for="email">Email</label>
+                    <input tabindex="2" type="email" id="email" placeholder="Enter your name" required> 
+                    <label for="age">Age(optional)</label>
+                    <input tabindex="3" type="number" id="age" placeholder="Age" >
+                    <label for="gender">Gender</label>
+                    <div class="gender">
+                      <input tabindex="4" type="radio" id="gender" name="gender" value="female">
+                      <label for="gender">Female</label><br>
+                      <input tabindex="4" type="radio" id="gender" name="gender" value="male">
+                       <label for="gender">Male</label><br>
+                       <input tabindex="4" type="radio" id="gender" name="gender" value="other">
+                       <label for="gender">Other</label> 
+                    </div>
+                    <label for="roles">Which option best describes your current role?</label>
+                    <select tabindex="5" name="roles" id="roles">
+                        <option disabled selected>Select your current role</option>
+                        <option value="student">Student</option>
+                        <option value="job">Full time job</option>
+                        <option value="learner">Full time learner</option>
+                        <option value="housewife">Housewife</option>
+                        <option value="secret">Prefer not to say</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="recommend">Would you recommend our community for creating start-ups to a friend?</label>
+                    <div class="recommend">
+                        <input tabindex="6" type="radio" id="definitely" name="recommend" value="definitely" checked>
+                        <label for="definitely">Definitely</label><br>
+                        <input tabindex="6" type="radio" id="maybe" name="recommend" value="maybe">
+                        <label for="maybe">Maybe</label><br>
+                        <input tabindex="6" type="radio" id="not sure" name="recommend" value="not sure">
+                        <label for="not sure">Not Sure</label>
+                    </div>
+                    <label for="update">What would you like to see improved?(Check all that apply)</label>
+                    <div class="update">
+                        <input tabindex="7" type="checkbox" id="op1" name="op1" value="schedule">
+                        <label for="op1">Schedule</label><br>
+                        <input tabindex="7" type="checkbox" id="op2" name="op2" value="development method">
+                        <label for="op2">Development method</label><br>
+                        <input tabindex="7" type="checkbox" id="op3" name="op3" value="working environment">
+                        <label for="op3">Working environment</label><br>
+                        <input tabindex="7" type="checkbox" id="op4" name="op4" value="design of the workspace">
+                        <label for="op4">Design of the workspace</label><br>
+                        <input tabindex="7" type="checkbox" id="op5" name="op5" value="more team buildings">
+                        <label for="op5">More team buildings</label><br>
+                        <input tabindex="7" type="checkbox" id="op6" name="op6" value="additional courses">
+                        <label for="op6">Additional courses</label>
+                    </div>
+                    <label for="comment">Any comments or suggestions?</label>
+                    <textarea tabindex="8" name="comments" id="comment" cols="10" rows="8" placeholder="Enter your comment here..."></textarea>
+                    <input tabindex="9" type="submit" value="Submit">
+                    <input tabindex="10" type="reset" value="Reset">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    
+</body>
+</html>
