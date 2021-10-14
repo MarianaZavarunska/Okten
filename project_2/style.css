@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat'sans-serif;
+}
+
+fieldset {
+    border: none;
+    margin-top: 20px;
+}
+
+legend {
+    font-size: 1.8rem;
+    color: rebeccapurple;
+    text-align: center;
+}
+
+.form {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    width: 60%;
+    top: 15%;
+    left: 20%;
+    cursor: pointer;
+}
+
+.w-100 {
+    width: 100%;
+    padding: 20px;
+}
+
+label {
+    display: block;
+    padding: 10px;
+}
+
+input, select{
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
+.recommend input, .recommend label, 
+.update input, .update label,.gender input, .gender label { 
+   display: inline-block;
+   width: auto;
+
+}
+
+.w-100 >label {
+    font-size: 1.3rem;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+}
+
+input[type=submit], input[type=reset] {
+    display: inline-block;
+    width: 49.5%;
+    font-size: 1.3rem;
+    background-color: rebeccapurple;
+    opacity: 0.8;
+    margin: 5px 0;
+    box-shadow: 0 3px 5px black;
+}
+
+input:checked {
+    filter: hue-rotate(50deg);
+}
+
+
+@media screen and (max-width: 768px) {
+    legend {
+        padding-top: 10px;
+        font-size: 1.1rem;
+    }
+    .form {
+        font-size: 0.9rem;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    .w-100{
+        padding: 10px 10px 0;
+    }
+
+    .w-100 >label {
+        font-size: 0.9rem;
+    }
+    input[type=submit], input[type=reset] {
+        display: block;
+        width: 100%;
+    }
+ }
+     
+ 
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+   legend {
+       padding-top: 10px;
+       font-size: 2rem;
+   }
+   .form {
+       font-size: 1.8rem;
+       width: 100%;
+       left: 0;
+       top: 0;
+   }
+   .w-100 >label {
+       font-size: 1.9rem;
+   }
+}
+    
