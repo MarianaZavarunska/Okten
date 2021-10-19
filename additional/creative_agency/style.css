@@ -139,8 +139,16 @@ input::placeholder {
     flex-grow: 3;
 }
 
+.column {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2%;
+    row-gap: 20px;
+}
+
 .column img {
     max-height: 300px;
+    width: 48%;
 }
 
 .feedback {
