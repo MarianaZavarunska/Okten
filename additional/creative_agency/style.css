@@ -162,12 +162,8 @@ input::placeholder {
     background-color: lightgray;
     width: 100%;
     height: 100px;
-}
-
-.contacts div {
-    width: 100%;
-    margin: 2%;
     text-align: center;
+    padding: 20px;
 }
 
 
