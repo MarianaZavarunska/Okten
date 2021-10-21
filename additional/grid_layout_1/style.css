@@ -82,7 +82,7 @@ body {
 .main{
     grid-area: main;
     color: #fff;
-    max-width: 1440px;
+    max-width: 100%;
 } 
 
   /* HOME */
