@@ -12,13 +12,14 @@
 }
 
 .header{
-    background-color: rgb(137, 184, 185);;
+    background-color: rgb(137, 184, 185);
     height: 10vh;
     width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 30px 150px 30px;
+    
 }
 .logo {
     width: 15%;
@@ -28,13 +29,22 @@
 }
 
 .icons{
-    width: 30%;
-    height: 100%;
+    width: 20%;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 8px;
+}
+
+.icons-item{
+   width: 20%;
+
 }
 
 /* MAIN */
 
+/* HOME */
 .home {
     width: 100vw;
     height: 40vh;
@@ -68,15 +78,206 @@
 }
 
 .boxes-item {
-   width: 150px;
-   height: 150px;
+   width: 160px;
+   height: 160px;
    margin: 10px;
    background-color: rgb(97, 52, 95);
    border-radius: 10px; 
 }
 
+
+/* CONTEXT */
 .context {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
+    padding: 15% 30px 10%;
     background-color: rgb(68, 116, 117);
+}
+
+.context-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px 0 ;
+    justify-content:space-between;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.column {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.context-item {
+    width: 160px;
+    height: 160px;
+    background-color: rgb(97, 52, 95);
+    border-radius: 10px; 
+}
+ /* DESCRIPTION */
+.description {
+    width: 100vw;
+    padding: 15% 30px 10%;
+    background-color: rgb(68, 116, 117);
+}
+
+.description-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px 0;
+    justify-content:space-evenly;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.row-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    column-gap: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+
+.description-item {
+    width: 320px;
+    height: 200px;
+    background-color: rgb(97, 52, 95);
+    border-radius: 10px; 
+}
+
+ 
+/* ADDITIONAL */
+.additional {
+    width: 100vw;
+    padding: 0 30px 10px;
+    background-color: rgb(68, 116, 117);
+}
+
+.additional-container{
+    width: 100%;
+    display: flex;
+    column-gap: 80px;
+    justify-content: center;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.additional-item {
+    width: 250px;
+    height: 160px;
+    margin: 10px;
+    background-color: rgb(97, 52, 95);
+    border-radius: 10px; 
+}
+.additional-item.active {
+    box-shadow: 10px 10px 10px rgb(0, 0, 0); 
+    transform: scale(1.5,1.5);
+    transition: transform 2s ease-in-out;
+}
+  
+img{ 
+      width: 250px;
+      border-radius: 10px;
+}
+
+.arrow {
+    background-color: transparent;
+    font-size: 30px;
+    cursor: pointer;
+    height: 50%;
+    align-self: center;
+    justify-self: center;
+}
+
+ .arrow:focus {
+    outline: 0;
+}
+.left-arrow {
+    margin-right: -30px;
+} 
+.right-arrow{
+    margin-left: -5px;
+}
+
+/* CONTACTS */
+
+.contacts {
+    width: 100vw;
+    padding: 0 30px 10px;
+    background-color: rgb(68, 116, 117);
+}
+
+.contacts-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 130px;
+    justify-content: center;
+    border: 1px solid black;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+
+.contacts-logo{
+    width: 160px;
+    height: 160px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: rgb(97, 52, 95);
+}
+
+.contacts-context{
+    width: 50%;
+    height: 160px;
+    background-color: rgb(97, 52, 95);
+}
+
+/* FOOTER */
+.footer{ 
+    width: 100vw;
+    padding: 0 30px 10px;
+    background-color: rgb(137, 184, 185);
+    padding-top: 10px;
+}
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    border: 1px solid black;
+    padding: 20px 0;
+}
+
+.cubes-container{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    justify-content: center;
+    align-content: center;
+    padding: 3%;
+    border: 1px solid black;
+}
+
+.cube{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(97, 52, 95);
+}
+
+.footer-title{
+    width: 200px;
+    height: 30px;
+    background-color: rgb(97, 52, 95);
+    margin-bottom: 20px;
+    margin: 0 auto;
 }

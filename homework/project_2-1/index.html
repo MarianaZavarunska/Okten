@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Flex Layout</title>
 </head>
 <body>
@@ -15,8 +16,12 @@
             <div class="logo">
             </div>
             <div class="icons">
-                <div class="icons-item"></div>
-                <div class="icons-item"></div>
+                <div class="icons-item">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="icons-item">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </header>
          <!-- MAIN -->
@@ -35,38 +40,58 @@
 
             <section class="context">
                 <div class="context-container">
+                    <div class="column">
+                        <div class="context-item"></div>
+                        <div class="context-item"></div>
+                        <div class="context-item"></div>
+                        <div class="context-item"></div>
+                    </div>
+                    <div class="column">
                     <div class="context-item"></div>
                     <div class="context-item"></div>
                     <div class="context-item"></div>
                     <div class="context-item"></div>
-                    <div class="context-item"></div>
-                    <div class="context-item"></div>
-                    <div class="context-item"></div>
-                    <div class="context-item"></div>
+                   </div>
                 </div>
             </section>
 
             <section class="description">
                 <div class="description-container">
-                    <div class="description-item"></div>
-                    <div class="description-item"></div>
-                    <div class="description-item"></div>
-                    <div class="description-item"></div>
+                    <div class="row-container">
+                       <div class="description-item"></div>
+                       <div class="description-item"></div>
+                    </div>
+                    <div class="row-container">
+                        <div class="description-item"></div>
+                        <div class="description-item"></div>
+                     </div>   
                 </div>
             </section>
 
             <section class="additional">
                 <div class="additional-container">
-                    <div class="additional-item"></div>
-                    <div class="additional-item"></div>
-                    <div class="additional-item"></div>
+                    <button class="arrow left-arrow" id="left">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <div class="additional-item">
+                        <img src="images/Screen Shot 2021-10-22 at 10.52.22 AM.png" alt="">
+                    </div>
+                    <div class="additional-item">
+                        <img src="images/Screen Shot 2021-10-22 at 10.53.12 AM.png" alt="">
+                    </div>
+                    <div class="additional-item">
+                        <img src="images/Screen Shot 2021-10-22 at 10.54.03 AM.png" alt="">
+                    </div>
+                    <button class="arrow right-arrow" id="right">
+                      <i class="fas fa-arrow-right"></i>
+                  </button>
                 </div>
             </section>
 
             <section class="contacts">
                 <div class="contacts-container">
-                    <div class="circle"></div>
-                    <div class="contact-context"></div>
+                    <div class="contacts-logo"></div>
+                    <div class="contacts-context"></div>
                 </div>
             </section>
             
@@ -84,6 +109,8 @@
          </div>
      </footer>
     </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
