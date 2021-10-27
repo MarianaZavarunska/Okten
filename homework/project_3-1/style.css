@@ -34,7 +34,7 @@ body {
 }
 
 .container {
-    /* max-width: 1180px; */
+    max-width: 1180px;
     margin: 0 auto;
     padding: 0 10px;
 }
@@ -81,7 +81,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid #fff;
+    padding-top: 15px;
 
 }
 
@@ -152,23 +152,53 @@ body {
     margin-left: 100px;
 }
 
-@media(max-width: 767px){
+@media(max-width: 768px){
+     
+    body.lock{
+      overflow: hidden;
+    }
+    .header-body{
+        padding: 20px 5px;
+    }
+   
 
-    .header-logo::before{
-        width: 70px;
-        height: 70px;
+    .header::before{
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0);
+        padding: 20px;
+        z-index: 5;
     }
 
-    .header-logo::after{
-        width: 70px;
+    .header-body{
         height: 70px;
+        padding: 10px 5px;
+    }
+
+    .header-logo {
+        width: 70px;
+        height: 50px;
+    }
+
+    .header-logo::before,
+    .header-logo::after{
+        width: 35px;
+        height: 35px;
+    }
+
+    .header-logo::before{
+        left: 40px;
     }
 
     .header-burger{
         display: block;
         position: relative;
-        width: 80px;
-        height: 70px;
+        width: 70px;
+        height: 50px;
         z-index: 7;
     }
 
@@ -179,7 +209,8 @@ body {
         left: 0;
         width: 100%;
         height: 3px;
-        top: 38px;
+        top: 30px;
+        transition: all 0.3s ease-in;
     }
 
     .header-burger::before,
@@ -190,6 +221,7 @@ body {
         width: 100%;
         height: 3px;
         left: 0;
+        transition: all 0.3s ease-in;
     }
     .header-burger::before{
         top: 14px;
@@ -199,14 +231,35 @@ body {
         bottom: 0;
     }
 
+    .header-burger.active:before{
+        transform: rotate(45deg);
+        top: 35px;
+    }
+
+    .header-burger.active:after{
+        transform: rotate(-45deg);
+        bottom: 35px;
+    }
+
+    .header-burger.active span{
+        transform: scale(0);
+    }
+
     .header-menu{
         position: fixed;
-        top: 0;
+        top: -100%;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: black;
+        background-color: rgb(12, 12, 12);
+        overflow: auto;
+        transition: all 0.3s ease-in;
         z-index: 3;
+
+    }
+
+    .header-menu.active{
+        top: 18%;
     }
 
     .header-list{
@@ -219,8 +272,8 @@ body {
 
 
     .header-link{
-       font-size: 100px;
-       padding: 30px;
+       font-size: 30px;
+       padding: 10px;
     }
     .header-link img{
         display: none;
@@ -249,7 +302,7 @@ body {
     flex-direction: column;
     row-gap: 3%;
     padding: 20%;
-   color: #FF7400;
+    color: #FF7400;
 }
 
 h2{
@@ -315,14 +368,13 @@ h1{
 
 .home-container {
     bottom: -230px;
-    left: 140px;
-    width: 1138px;
     position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: center;
     column-gap: 3%;
     padding-bottom: 30px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-item{
@@ -340,4 +392,172 @@ h1{
 .home-item img {
     width: 87px;
     height: 87px;
+}
+
+@media(max-width: 410px) {
+    .home-container{
+        flex-direction: column;
+        row-gap: 30px;
+        top: 680px;
+        align-items: center;
+        bottom: 0;
+        margin-bottom: 5%;
+    }
+    .home-item{
+        width: 250px;
+        height: 280px;
+        font-size: 20px;
+    }
+
+    .home-title{
+        row-gap: 1%;
+        padding-top: 40%;
+    }
+    
+    h2{
+        font-size: 20px;
+        padding: 5px;
+        text-align: center;
+    
+    }
+    
+    h1{
+        text-align: center;
+        font-size: 22px;
+        padding: 5px;
+    }
+
+    .home-logo{
+        width: 300px;
+         padding: 5px;
+         margin-left: -53px;
+         text-align: center;
+         font-size: 16px;
+     }
+    
+     .home-logo::before{
+         width: 30px;
+         top: 19px;
+         left: -2px;
+     }
+     .home-logo::after{
+         width: 30px;
+         top: 18px;
+         right: -1px;
+     }
+     /* .btn-primary.m160{
+         margin-left: 43px;
+         text-align: center;
+     } */
+}
+
+
+@media(min-width: 411px)and (max-width:767px){
+    .home-container{
+        flex-direction: column;
+        row-gap: 30px;
+        top: 720px;
+        bottom: 0;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+    .home-item{
+        width: 250px;
+        height: 280px;
+        font-size: 20px;
+    }
+
+    .home-title{
+        row-gap: 1%;
+        padding-top: 40%;
+    }
+    
+    h2{
+        font-size: 23px;
+        padding: 5px;
+        text-align: center;
+    
+    }
+    
+    h1{
+        text-align: center;
+        font-size: 25px;
+        padding: 5px;
+    }
+
+    .home-logo{
+        width: 300px;
+         padding: 5px;
+         margin-left: -31px;
+         text-align: center;
+         font-size: 16px;
+     }
+    
+     .home-logo::before{
+         width: 30px;
+         top: 19px;
+         left: -2px;
+     }
+     .home-logo::after{
+         width: 30px;
+         top: 18px;
+         right: -1px;
+     }
+}
+
+@media(min-width: 768px) and (max-width: 1024px){
+
+    .header-list li {
+        margin: 0 0 0 0;
+    }
+
+    .m100{
+        margin-left: 15px;
+    }
+
+    .header-burger.active:before{
+        top: 13px;
+    }
+
+    .header-menu.active{
+        top: 10%;
+    }
+
+    .header-menu.active .header-link{
+        font-size: 45px;
+    }
+
+    .home-title{
+        padding-left: 10%;
+    }
+
+    .home-container{
+        top: 390px;
+        /* left: 8%; */
+    }
+    .home-item{
+        width: 220px;
+        height: 240px;
+        font-size: 18px;
+    } 
+
+}
+
+@media(max-width: 768px) {
+    .home-title{
+        align-items: center;
+    }
+    .home-logo{
+        margin-left: 0;
+    }
+
+    .btn-primary.m160 {
+        margin-left: 0;
+    }
+}
+
+@media (max-height: 414px) {
+    .home-container {
+        top: 800px;
+    }
 }
