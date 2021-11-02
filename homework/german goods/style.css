@@ -274,3 +274,26 @@ mark {
 }
 
 
+@media screen  and (max-width: 378px) {
+    section > div >.d-flex{
+        flex-direction: column;
+    }
+    img{
+        max-width: 100%;
+    }
+    .works-img{
+        margin-right: -20px;
+    }
+    section#works > div >.d-flex{
+        column-gap: 0;
+    }
+}
+
+/* fix order  */
+
+    
+
+    
+
+
+
