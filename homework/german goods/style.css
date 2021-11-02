@@ -226,3 +226,37 @@ mark {
     background: #fff;
     color: #004FC7;
 }
+
+.btn_contact{
+ background: linear-gradient(180deg, #0C5CD6 0%, rgba(0, 56, 140, 0) 100%), #004FC7;
+ color: #fff;
+border: 1px solid #FFFFFF;
+box-sizing: border-box;
+box-shadow: 0px 1px 4px rgba(48, 67, 133, 0.5);
+border-radius: 12px;
+margin-left: 75px;
+}
+
+
+
+button>i{
+    font-size: 50px;
+    top: 0;
+    left: 0;
+}
+
+/* FOOTER */
+
+.col-3{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.marked{
+font-weight: bold;
+font-size: 17px;
+line-height: 32px;
+letter-spacing: -0.4px;
+color: #A3ADBA;
+margin-bottom: 20px;
+}
