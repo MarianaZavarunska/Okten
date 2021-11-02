@@ -247,16 +247,30 @@ button>i{
 
 /* FOOTER */
 
+footer{
+    border-top: 1px solid lightgrey;
+}
+
 .col-3{
-    border: 1px solid black;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.4px;
     padding: 10px;
+    color: #9EABBB;
+
+
 }
 
 .marked{
+text-decoration: none;
 font-weight: bold;
-font-size: 17px;
-line-height: 32px;
-letter-spacing: -0.4px;
 color: #A3ADBA;
 margin-bottom: 20px;
 }
+
+mark {
+    color: #9EABBB;
+    text-decoration-line: underline;
+}
+
+
