@@ -147,6 +147,10 @@ ul.numbered-list li:before {
     top: 4px;
 }
 
+.description-img img{
+    max-height: 600px;
+}
+
 #top, 
 #designs{
     background: #FBFBFC;
@@ -317,13 +321,12 @@ mark {
     div.text-light{
        margin: 20px;
     }
-    /* .description-img{
-        width: 375px;
-    }
 
     .description-img img{
-        width: 375px;
-    } */
+        width: 800px;
+        height: 150px;
+        max-width: none;
+    }
 
     .description-content{
         text-align: center;
