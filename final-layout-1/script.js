@@ -5,6 +5,7 @@ const carouseAsidelItem = document.querySelector('.carousel-aside-items');
 const carouselTopItemsWrapper = document.querySelector('.carousel-top-items');
 const btnLeft = document.getElementById('left-top');
 const btnRight = document.getElementById('right-top');
+const btnFav = document.querySelectorAll('.fav');
 
 
 const carouselTopItems = document.querySelectorAll('.carousel-top-items .carousel-top-item')
@@ -85,4 +86,11 @@ function changeCard () {
      carouselTopItemsWrapper.style.transform = `translateX(${(index < 0 ? index : -index) * 460}px)`
 }
 
+
+btnFav.forEach(element => { 
+    element.addEventListener('click', (e) => {
+        e.target.classList.toggle('far')
+        e.target.classList.toggle('fas');
+    })
+});
 

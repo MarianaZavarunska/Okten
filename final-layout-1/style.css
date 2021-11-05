@@ -503,7 +503,10 @@ button[type=submit]{
 
 .icons .fa-heart{
     color:#005BB9;
+    cursor: pointer;
 }
+
+
 
 .icon-diagram{
     width: 25px;
