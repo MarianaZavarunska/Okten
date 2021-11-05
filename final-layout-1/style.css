@@ -5,8 +5,8 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Roboto'sans-serif;
+body, input{
+    font-family: 'Roboto' sans-serif;
 }
 
 header{
@@ -501,7 +501,7 @@ button[type=submit]{
     color: #005BB9;
 }
 
-.fa-heart{
+.icons .fa-heart{
     color:#005BB9;
 }
 
@@ -653,12 +653,13 @@ button[type=submit]{
 /* .footer-context{
     flex-basis: 23%;
 } */
-.footer-context-title{
+.footer-context-title, 
+.contact-item > div{
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
     color: #868DAC;
-    margin: 10px 0 10px 15% ;
+    margin: 10px 0;
 }
 
 .footer-wrapper{
@@ -677,13 +678,18 @@ button[type=submit]{
     column-gap: 70px;
 }
 
+.footer-context-nav {
+    padding-left: 0;
+}
+
 
 .footer-context-nav li{
     list-style: none;
     margin: 10px 0;
 }
 
-.footer-context-nav li a{
+.footer-context-nav li a,
+.contact-item > p{
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
@@ -691,9 +697,40 @@ button[type=submit]{
     color: #fff;
 }
 
+.contact-item > p{
+    padding-top: 17px;
+}
+
+
+
 .footer-item  .footer-context:last-child
 .footer-context-nav li:last-child{
     margin-top: 35px;
+}
+
+.subscription-wrapper > p{
+    font-size: 16px;
+    line-height: 18px;
+    color: #858CAB;
+}
+.btn-email{
+    background-color: inherit;
+}
+
+.social-media{
+    column-gap: 40px;
+}
+
+.social-media a {
+    font-size: 20px;
+    color: #fff;
+}
+
+.copyright{
+    font-size: 16px;
+    line-height: 20px;
+    color: #737E9B;
+    margin: 20px 0 20px;
 }
 
 
