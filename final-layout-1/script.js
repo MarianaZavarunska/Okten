@@ -28,7 +28,9 @@ function changeImage() {
       idx = discountContainers.length - 1 
   }
 
-  carouselItems.style.transform = `translateY(${-idx * 375}px)`
+  let translateHeight = discountContainers[0].offsetHeight;
+
+  carouselItems.style.transform = `translateY(${-idx * translateHeight}px)`
   carouseAsidelItem.style.transform = `translateY(${-idx * 215}px)`
   
   let circles = document.querySelectorAll('.circle');

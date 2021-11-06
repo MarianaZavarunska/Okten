@@ -87,6 +87,10 @@ section#menu-main > div>
     line-height: 23px;
 }
 
+.small-item{
+    display: none;
+}
+
 /* MENU-BOTTOM */
 
 section#menu-bottom form{
@@ -391,14 +395,6 @@ button[type=submit]{
 
 }
 
-.top-content{
-    display: inline-block;
-}
-
-.top-img{
-    display: inline-block;
-}
-
 .top-title{
     font-weight: 500;
     font-size: 20px;
@@ -454,8 +450,8 @@ button[type=submit]{
 }
 .btn-filter{
     font-weight: 500;
-    font-size: 20px;
-    line-height: 23px;
+    font-size: 1rem;
+    line-height: 1.3rem;
     letter-spacing: 1px;
     color: #005BB9;
     border: 2px solid #005BB9;
@@ -471,6 +467,10 @@ button[type=submit]{
 .gallery-item:hover{
     box-shadow: 1px 5px 7px grey;
     border-radius: 6px;
+}
+
+.gallery-img img {
+    max-width: 100%;
 }
 
 .btn-checked{
@@ -734,6 +734,205 @@ button[type=submit]{
     line-height: 20px;
     color: #737E9B;
     margin: 20px 0 20px;
+}
+
+
+@media screen and (max-width: 576px){
+  .small-item{
+      display: block;
+  }
+  section.menu-top .navbar-item .navbar-nav{
+    flex-direction: row;
+    column-gap: 10px;
+  }
+  .navbar-brand img{
+      width: 40px;
+      height: 30px;
+  }
+
+  .brand-context p{
+      font-size: 10px;
+  }
+
+  section#menu-main > div > .navbar{
+      flex-wrap: nowrap;
+      column-gap: 0;
+  }
+
+  section#menu-main .navbar-nav{
+      flex-basis: 70%;
+  }
+  section#menu-bottom form{
+      flex-basis: 80%;
+  }
+
+  input[type=search]::placeholder{
+      font-size: 9px;
+  }
+
+  button[type=submit]{
+      padding: 6px 10px;
+      margin-left: -40px;
+  }
+
+  .subscription-wrapper button[type=submit]{
+           margin-left: 0;
+           margin-top: 10px;
+  }
+
+    .gallery-item{
+        flex-basis: 50%;
+    }
+
+    .fb-70,
+    .news-item,
+    .fb-35{
+        flex-basis: auto;
+    }
+    .news-date::before{
+        display: none;
+    }
+    .top-description{
+        white-space: break-spaces;
+    }
+
+    .carousel-main{
+        margin-top: 75%;
+        margin-bottom: 20px;
+        height: 200px;
+    }
+
+    .discount-context{
+        row-gap: 0px;
+    }
+    .gap-20{
+        column-gap: 0px;
+    }
+    .price-old{
+        display: block;
+    }
+    .discount-name,
+    .price-old{
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+    .discount-numb{
+        font-size: .7rem;
+        line-height: 1rem;
+    }
+    .price-new{
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+    .discount-container{
+        padding: 10px 30px;
+    }
+
+    .discount-context{
+        flex-basis: 60%;
+    }
+    .discount-img{
+        flex-basis: 40%;
+    }
+    .circle{
+        max-height: 10px;
+        max-width: 10px;
+        bottom: 3px;
+    }
+    .carousel-aside{
+        height: 420px;
+    }
+    .discount-img img{
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+    }
+    .discount .d-flex.gap-20.mx_20{
+        align-items: center;
+    }
+}
+
+@media (min-width: 410px) and (max-width: 768px){
+    .carousel-main{
+        margin-top: 30%;
+    }
+    .discount-container{
+        padding: 30px;
+    }
+    .discount-name{
+        font-size: 30px;
+    }
+    .discount-context{
+        flex-basis: 60%;
+    }
+    .discount-img{
+        flex-basis: 40%;
+    }
+    .price-new{
+       font-size: 24px;
+       display: block;
+    }
+    .discount-img img{
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+    }
+    .discount .d-flex.flex-column.flex-md-row{
+        margin-top: 40%;
+    }
+    .discount .d-flex.gap-20.mx_20{
+        align-items: center;
+    }
+    .aside-img img{
+        width: auto;
+        height: auto;
+        max-width: 100%;
+    }
+    .carousel-aside {
+        height: 360px;
+    }
+    .aside-context .aside-name,
+    .aside-price-new{
+        font-size: .7rem;
+        margin: 0;
+    }
+    .aside-numb,
+    .aside-price-old{
+        font-size: .6rem;
+    }
+    .aside-price-new{
+        font-size: .7rem;
+    }
+    .aside-img,
+    .aside-context{
+        flex-basis: 50%;
+    }
+    .aside-item{
+        padding: 10px;
+    }
+    .gap-20{
+        column-gap: 0px;
+    }
+    .discount-context{
+        row-gap: 0px;
+    }
+    .carousel-main{
+        height: 230px;
+    }
+}
+@media (min-width: 760px) and (max-width: 770px){
+
+    .carousel-aside,
+    .carousel-main{
+        height: 320px;
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+    .carousel-main {
+        margin-top: 0;
+    }
 }
 
 

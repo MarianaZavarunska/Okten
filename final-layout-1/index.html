@@ -30,7 +30,7 @@
                 <a class="nav-link" href="#"><i class="fas fa-map-marker-alt fw-bold pe-2"></i>Ваше місто: <span
                     class="text-decoration-underline ps-1">Львів</span></a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown d-none d-lg-block">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
                   Інформація
@@ -41,7 +41,7 @@
                   <li><a class="dropdown-item text-black" href="#">Something else here</a></li>
                 </ul>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown d-none d-lg-block">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
                   Співпраця
@@ -52,9 +52,22 @@
                   <li><a class="dropdown-item text-black" href="#">Something else here</a></li>
                 </ul>
               </li>
+
+              <!-- SMALL -->
+              <li class="nav-item dropdown small-item">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Інше
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item text-black" href="#">Action</a></li>
+                  <li><a class="dropdown-item text-black" href="#">Another action</a></li>
+                  <li><a class="dropdown-item text-black" href="#">Something else here</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
-          <div class="navbar-item">
+          <div class="navbar-item d-none d-lg-block">
             <ul class="navbar-nav ">
               <li class="nav-item">
                 <a class="nav-link" href="#">Доставка</a>
@@ -82,6 +95,7 @@
 
         </nav>
       </div>
+
     </section>
     <section class="menu-main bg-white" id="menu-main">
       <div class="container">
@@ -93,23 +107,23 @@
               <p>Інтернет-магазин запчастин для АКПП</p>
             </div>
           </div>
-          <div class="navbar-nav">
-            <div class="d-flex">
+          <div class="navbar-nav ">
+            <div class="d-lg-flex d-none">
               <div><i class="far fa-clock text-black fs-2 pe-1"></i> </div>
               <div class="text-end">
                 <div>Ми працюємо: будні - 9:00-21:00</div>
                 <div>сб-9:00-15:00</div>
               </div>
             </div>
-            <div class="d-flex align-items-center">
+            <div class="d-lg-flex d-none align-items-center ">
               <i class="fas fa-map-marker-alt fs-2 pe-1 "></i>
               <div> Шевченка про-т,кв.44а</div>
             </div>
-            <div class="d-flex align-items-center bg-green p-1">
+            <div class="d-flex align-items-center bg-green p-1 ">
               <i class="fab fa-whatsapp-square fs-2 pe-1 c-green"></i>
               <div class="fs-12">Напиши в Whatsapp</div>
             </div>
-            <div class="d-flex flex-column">
+            <div class="d-flex flex-column ">
               <div class="tel">+380 95 371 23 77</div>
               <div class="text-decoration-underline fs-12">
                 форма зворотнього зв'язку
@@ -126,7 +140,7 @@
             <button class="btn btn-style dropdown-toggle px-10 py-10" type="button" id="dropdownMenuButton1"
               data-bs-toggle="dropdown" aria-expanded="false">
               <span class="burger"></span>
-              <span class="burger-name">Каталог</span>
+              <span class="burger-name d-none d-lg-inline">Каталог</span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li><a class="dropdown-item text-uppercase my-3" href="#">Action</a></li>
@@ -137,9 +151,12 @@
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Пошук по найменуванню або по номеру"
               aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Знайти</button>
+            <button class="btn btn-outline-success" type="submit">
+              <i class="fas fa-search  d-md-none"></i>
+              <span class="d-none d-md-inline"> Знайти</span>
+            </button>
           </form>
-          <div class="d-flex align-items-center justify-content-center gap-20 ms-3">
+          <div class=" d-none d-md-flex align-items-center justify-content-center gap-20 ms-3">
             <i class="far fa-user mr"></i>
             <div class="fs-12">Вхід</div>
 
@@ -161,7 +178,7 @@
     <!-- DISCOUNT -->
     <section class="discount">
       <div class="container">
-        <div class="d-flex">
+        <div class="d-flex flex-column flex-md-row">
           <div class="carousel-main">
             <div class="carousel-items">
 
@@ -226,10 +243,10 @@
               </div>
             </div>
             <div class="carousel-navigaion">
-              <button class="arrow left-arrow" id="left">
+              <button class="arrow left-arrow d-none d-lg-inline-block" id="left">
                 <i class="fas fa-arrow-left"></i>
               </button>
-              <button class="arrow right-arrow" id="right">
+              <button class="arrow right-arrow d-none d-lg-inline-block" id="right">
                 <i class="fas fa-arrow-right"></i>
               </button>
               <div class="circles d-flex flex-row">
@@ -338,80 +355,80 @@
     <section class="top">
       <div class="container">
         <div class="carousel-top">
-          <div class="carousel-top-items">
-            <div class="carousel-top-item d-inline-block">
-              <div class="top-content">
+          <div class="carousel-top-items d-flex d-md-block">
+            <div class="carousel-top-item d-flex d-md-inline-block">
+              <div class="top-content d-inline-block">
                  <p class="top-title ">Масла</p>
                  <p class="top-description">Трансмісійне масло; присадка в олію акпп</p>
                  <button class="btn-top ">
                    Перейти
                  </button>
               </div>
-              <div class="top-img">
+              <div class="top-img d-inline-block">
                 <img src="images/top-1.png" alt="масло">
               </div>
             </div>
   
-            <div class="carousel-top-item d-inline-block">
-              <div class="top-content">
+            <div class="carousel-top-item d-flex d-md-inline-block">
+              <div class="top-content d-inline-block">
                  <p class="top-title">Фільтри</p>
                  <p class="top-description">Масляний фільтр; повітряний фільтр</p>
                  <button class="btn-top">
                    Перейти
                  </button>
               </div>
-              <div class="top-img">
+              <div class="top-img d-inline-block">
                 <img src="images/top-2.png" alt="фільтри">
               </div>
             </div>
   
-            <div class="carousel-top-item d-inline-block">
-              <div class="top-content">
+            <div class="carousel-top-item d-flex d-md-inline-block">
+              <div class="top-content d-inline-block">
                  <p class="top-title">Радіатори</p>
                  <p class="top-description">Додаткові радіатори</p>
                  <button class="btn-top">
                    Перейти
                  </button>
               </div>
-              <div class="top-img">
+              <div class="top-img d-inline-block">
                 <img src="images/top-3.png" alt="радіатори">
               </div>
             </div>
   
-            <div class="carousel-top-item d-inline-block">
-              <div class="top-content">
+            <div class="carousel-top-item  d-flex d-md-inline-block">
+              <div class="top-content d-inline-block">
                  <p class="top-title">Масла</p>
                  <p class="top-description">Трансмісійне масло; присадка в олію акпп</p>
                  <button class="btn-top">
                    Перейти
                  </button>
               </div>
-              <div class="top-img">
+              <div class="top-img d-inline-block">
                 <img src="images/top-1.png" alt="масло">
               </div>
             </div>
   
-            <div class="carousel-top-item d-inline-block">
-              <div class="top-content">
+            <div class="carousel-top-item d-flex d-md-inline-block">
+              <div class="top-content d-inline-block">
                  <p class="top-title">Фільтри</p>
                  <p class="top-description">Масляний фільтр; повітряний фільтр</p>
                  <button class="btn-top">
                    Перейти
                  </button>
               </div>
-              <div class="top-img">
+              <div class="top-img d-inline-block">
                 <img src="images/top-2.png" alt="фільтри">
               </div>
             </div>
-            <div class="carousel-top-item d-inline-block">
-              <div class="top-content">
+            <div class="carousel-top-item d-flex d-md-inline-block">
+              <div class="top-content d-inline-block">
                  <p class="top-title">Радіатори</p>
                  <p class="top-description">Додаткові радіатори</p>
                  <button class="btn-top">
                    Перейти
                  </button>
               </div>
-              <div class="top-img">
+              <div class="top-img d-inline-block">
                 <img src="images/top-3.png" alt="радіатори">
               </div>
             </div>
@@ -435,9 +452,9 @@
         <div class="d-flex filter-wrapper my-3">
           <button class="btn btn-filter btn-checked">Підбірка товарів</button>
           <button class="btn btn-filter">Aкція</button>
-          <button class="btn btn-filter">Зараз кукляють</button>
+          <button class="btn btn-filter">Зараз купляють</button>
         </div>
-        <div class="d-flex gallery-items my-5">
+        <div class="d-flex gallery-items my-5 flex-wrap">
           <div class="gallery-item">
             <div class="gallery-img">
               <img src="images/gallery-1.png" alt="Intermediate accumelator sleeve">
@@ -531,7 +548,7 @@
           <div class="line"></div>
         </div>
 
-        <div class="d-flex gallery-items mt-5">
+        <div class="d-flex gallery-items mt-5 flex-wrap">
           <div class="gallery-item">
             <div class="gallery-img">
               <img src="images/gallery-1.png" alt="Intermediate accumelator sleeve">
@@ -635,13 +652,13 @@
        <div class="news-title">
          Новини
        </div>
-       <div class="news-line">
+       <div class="news-line d-none d-md-block">
        </div>
 
-       <div class="d-flex news-container">
+       <div class="d-flex news-container flex-wrap flex-md-nowrap">
          <div class="news-item">
            <div class="news-date">
-             <div class="circle-black"></div>
+             <div class="circle-black d-none d-md-block"></div>
              3 жовтня
            </div>
            <div class="news-name my-4">
@@ -660,7 +677,7 @@
 
          <div class="news-item">
           <div class="news-date">
-          <div class="circle-black"></div>
+          <div class="circle-black d-none d-md-block"></div>
             3 жовтня
           </div>
           <div class="news-name my-4">
@@ -676,7 +693,7 @@
 
         <div class="news-item">
           <div class="news-date">
-          <div class="circle-black"></div>
+          <div class="circle-black d-none d-md-block"></div>
             3 жовтня
           </div>
           <div class="news-name my-4">
@@ -692,9 +709,9 @@
           </div>
         </div>
 
-        <div class="news-item">
+        <div class="news-item d-block d-md-none d-lg-block">
           <div class="news-date">
-          <div class="circle-black"></div>
+          <div class="circle-black d-none d-md-block"></div>
             3 жовтня
           </div>
           <div class="news-name my-4">
@@ -718,8 +735,8 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-wrapper d-flex">
-        <div class="footer-item d-flex fb-70">
+      <div class="footer-wrapper d-flex flex-wrap flex-md-nowrap">
+        <div class="footer-item d-flex fb-70 flex-wrap flex-md-nowrap flex-column flex-md-row">
           <div class="footer-context d-flex flex-column  ">
             <div class="footer-context-title">Каталог</div>
             <ul class="footer-context-nav">
@@ -800,7 +817,7 @@
         </div>
 
         <div class="footer-item fb-35 d-flex flex-column">
-          <div class="footer-contact-wrapper d-flex">
+          <div class="footer-contact-wrapper d-flex flex-column flex-md-row">
             <div class="contact-item">
               <div>Контакти</div>
               <p>+7 383 291 92 86</p>
@@ -816,7 +833,7 @@
           <div class="subscription-wrapper">
            <p>Ми онлайн, скористайся <a class="text-white text-decoration-none">Форма зворотнього зв'язку</a></p>
            <p>Підпишись на нашу розсилку і ви перші дізнаєтесь про наші новинки</p>
-           <form action="#" class="d-flex my-5">
+           <form action="#" class="d-flex  flex-column flex-md-row my-5">
             <input class="form-control me-2 btn-email" type="email" placeholder="Введіть ваш email"
               aria-label="Email">
             <button class="btn btn-outline-success px-4" type="submit">Підписатись</button>
