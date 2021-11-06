@@ -30,7 +30,7 @@
                 <a class="nav-link" href="#"><i class="fas fa-map-marker-alt fw-bold pe-2"></i>Ваше місто: <span
                     class="text-decoration-underline ps-1">Львів</span></a>
               </li>
-              <li class="nav-item dropdown d-none d-lg-block">
+              <li class="nav-item dropdown d-none d-md-block">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
                   Інформація
@@ -41,7 +41,7 @@
                   <li><a class="dropdown-item text-black" href="#">Something else here</a></li>
                 </ul>
               </li>
-              <li class="nav-item dropdown d-none d-lg-block">
+              <li class="nav-item dropdown d-none d-md-block">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
                   Співпраця
@@ -108,22 +108,22 @@
             </div>
           </div>
           <div class="navbar-nav ">
-            <div class="d-lg-flex d-none">
+            <div class="d-md-flex d-none">
               <div><i class="far fa-clock text-black fs-2 pe-1"></i> </div>
               <div class="text-end">
                 <div>Ми працюємо: будні - 9:00-21:00</div>
                 <div>сб-9:00-15:00</div>
               </div>
             </div>
-            <div class="d-lg-flex d-none align-items-center ">
+            <div class="d-md-flex d-none align-items-center order-2 order-md-3 order-lg-2">
               <i class="fas fa-map-marker-alt fs-2 pe-1 "></i>
               <div> Шевченка про-т,кв.44а</div>
             </div>
-            <div class="d-flex align-items-center bg-green p-1 ">
+            <div class="d-flex align-items-center bg-green p-1 order-3 order-md-4 order-lg-3">
               <i class="fab fa-whatsapp-square fs-2 pe-1 c-green"></i>
               <div class="fs-12">Напиши в Whatsapp</div>
             </div>
-            <div class="d-flex flex-column ">
+            <div class="d-flex flex-column order-4 order-md-2 order-lg-4">
               <div class="tel">+380 95 371 23 77</div>
               <div class="text-decoration-underline fs-12">
                 форма зворотнього зв'язку
@@ -157,14 +157,19 @@
             </button>
           </form>
           <div class=" d-none d-md-flex align-items-center justify-content-center gap-20 ms-3">
-            <i class="far fa-user mr"></i>
+            <div class="d-lg-flex align-items-md-center gap-md-2 text-md-center">
+              <i class="far fa-user mr"></i>
             <div class="fs-12">Вхід</div>
-
-            <i class="far fa-heart mr"></i>
+            </div>
+            <div class="d-lg-flex align-items-md-center gap-md-2 text-md-center">
+              <i class="far fa-heart mr"></i>
             <div class="fs-12 ">Улюблене</div>
-
-            <i class="bi bi-cart mr"></i>
-            <div class="fs-12 w-90">В корзині немає товару</div>
+            </div>
+            <div class="d-lg-flex align-items-md-center gap-md-2 text-md-center">
+              <i class="bi bi-cart mr"></i>
+              <div class="fs-12 w-90 d-md-none d-lg-block">В корзині немає товару</div>
+              <div class="d-none d-md-block  d-lg-none fs-12 w-90">Корзина пуста</div>
+            </div>
           </div>
         </div>
       </div>
@@ -735,7 +740,7 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-wrapper d-flex flex-wrap flex-md-nowrap">
+      <div class="footer-wrapper d-flex flex-wrap flex-md-nowrap flex-row flex-md-column flex-lg-row">
         <div class="footer-item d-flex fb-70 flex-wrap flex-md-nowrap flex-column flex-md-row">
           <div class="footer-context d-flex flex-column  ">
             <div class="footer-context-title">Каталог</div>
