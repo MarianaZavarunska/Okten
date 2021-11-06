@@ -7,6 +7,10 @@ const btnLeft = document.getElementById('left-top');
 const btnRight = document.getElementById('right-top');
 const btnFav = document.querySelectorAll('.fav');
 
+const btnBuy= document.querySelectorAll("button");
+const cartModal = document.getElementById("full");
+const btnClose = document.getElementById('btn-close');
+
 
 const carouselTopItems = document.querySelectorAll('.carousel-top-items .carousel-top-item')
 const discountContainers = document.querySelectorAll('.carousel-items .discount-container');
@@ -95,4 +99,36 @@ btnFav.forEach(element => {
         e.target.classList.toggle('fas');
     })
 });
+
+
+// POP-UP
+ 
+btnBuy.forEach( btn => { 
+    if(btn.classList.contains('btn-buy') || btn.classList.contains('aside-btn')){
+        btn.addEventListener('click', () =>{
+            toggleModal();
+        })
+    }
+})
+
+btnClose.addEventListener('click', () =>{
+    toggleModal();
+})
+
+window.onclick = function(event) {
+  if (event.target == cartModal) {
+    toggleModal();
+  }
+}
+
+function toggleModal(){
+    cartModal.classList.toggle('d-none');
+
+    if(cartModal.classList.contains('d-none')) return;
+
+    setTimeout(toggleModal, 1500);
+   
+} 
+
+
 

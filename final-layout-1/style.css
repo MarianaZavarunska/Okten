@@ -729,6 +729,35 @@ button[type=submit]{
     margin: 20px 0 20px;
 }
 
+/* POP-UP WINDOWS */
+
+.shopping-cart-full{
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    max-width: 700px;
+    background-color: #fff;
+    border: 1px solid #005BB9;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.shopping-cart-full > div > div p:first-child {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: #005BB9;
+}
+
+.button-close i{
+    margin-left: 20px;
+    font-size: 25px;
+    color: #A29DBC;
+}
+
+
+
+
 
 @media screen and (max-width: 576px){
   .small-item{
