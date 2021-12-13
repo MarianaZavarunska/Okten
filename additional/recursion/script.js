@@ -115,9 +115,9 @@ function reverseDigits(number) {
 
         reverseDigits(rest);
     }
-    if(string.charAt(string.length - 1) === ','){
+    if (string.charAt(string.length - 1) === ',') {
 
-       return string.slice(0,-1);
+        return string.slice(0, -1);
     }
 }
 console.log(reverseDigits(3456));
@@ -131,16 +131,119 @@ showTaskLabel(5);
 
 
 let word = '';
+let initialWord = '';
 
 function catchWord(str) {
 
     if (str.length === 0) {
-        return word;
+        return;
     } else {
-       
-       let cut =  str.charAt(str.length - 1);
-       return cut;
+        initialWord === '' ? initialWord = str : initialWord;
+
+        let cut = str.charAt(str.length - 1);
+        word += cut;
+        str = str.slice(0, -1);
+        catchWord(str);
+
     }
-   
+
 }
-console.log(catchWord('potop'));
+catchWord('potop');
+
+(initialWord === word) ? console.log('yes') : console.log('no');
+
+//===========================Task 6===========================
+showTaskLabel(6);
+
+// Вывести нечетные числа последовательности
+
+// Дана последовательность натуральных чисел(одно число в строке), завершающаяся числом 0. Выведите все нечетные числа из этой последовательности, сохраняя их порядок.
+// В этой задаче нельзя использовать глобальные переменные и передавать какие - либо параметры в рекурсивную функцию.
+// Функция получает данные, считывая их с клавиатуры.Функция не возвращает значение, а сразу же выводит результат на экран.
+
+
+
+document.addEventListener('keydown', function (event) {
+    if (typeof event.key === 'number') {
+        if (event.key % 2 !== 0) {
+            console.log(event.key);
+        } else {
+            alert('plese')
+        }
+    }
+})
+
+//===========================Task 7===========================
+showTaskLabel(7);
+
+// Количество единиц
+// Дана последовательность натуральных чисел  в строке, завершающаяся двумя числами 0 подряд. Определите, сколько раз в этой последовательности встречается число 1. Числа, идущие после двух нулей, необходимо игнорировать.
+
+let sequence = '0234157181941006713200';
+let counter = 0;
+let posution = 0;
+
+function cutedSequence() {
+
+    let firstO = sequence.indexOf('00');
+    
+    let sequenceCuted = sequence.slice(0, firstO);
+
+     findOne(sequenceCuted, posution);    
+}
+
+
+function findOne(sequenceCuted, position) {
+
+    if (sequenceCuted.includes('1', position)) {
+        position = sequenceCuted.indexOf('1', position);
+        counter++;
+
+        findOne(sequenceCuted, position + 1)
+    }
+}
+
+cutedSequence();
+
+console.log(counter);
+
+//===========================Task 8===========================
+showTaskLabel(8);
+
+// Заданная сумма цифр
+// Даны натуральные числа k и s. Определите, сколько существует k-значных натуральных чисел, сумма цифр которых равна s. Запись натурального числа не может начинаться с цифры 0.
+// В этой задаче можно использовать цикл для перебора всех цифр, стоящих на какой-либо позиции.
+
+let numberOfDigits = 3;
+let sumOfDigits = 10;
+counter = 0;
+
+function createNumber(digitsCount){
+    for (let i = 1; i < 10; i++) {
+        if(digitsCount > 1) 
+        {
+            recursion(i, digitsCount - 1); //recursion(1, 3 - 1)
+        } 
+        else if(i === sumOfDigits){
+            counter++;
+        }
+    }
+}
+
+function recursion(i, digitsCount, label){
+    for (let j = 0; j < 10; j++) {
+        if(digitsCount === 1)
+        {
+            if(i + j === sumOfDigits){ 
+                counter++;
+                console.log(`${label}${j}`);
+            }
+        }
+        else{
+            recursion(i + j, digitsCount - 1, `${i}${j}`); 
+        }
+    }
+}
+
+createNumber(numberOfDigits);
+console.log(counter);
