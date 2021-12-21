@@ -1,0 +1,23 @@
+show databases;
+use zavarunska;
+show tables;
+select * from client;
+
+-- 1.Вибрати усіх клієнтів, чиє ім'я має менше ніж 6 символів.
+select * from client where char_length(FirstName) < 6;
+
+-- 2.Вибрати львівські відділення банку.
+select * from department where DepartmentCity = 'Lviv';
+
+-- 3.Вибрати клієнтів з вищою освітою та посортувати по прізвищу.
+select * from client where Education = 'high' order by LastName;
+
+-- 4.Виконати сортування у зворотньому порядку над таблицею Заявка і вивести 5 останніх елементів.
+select * from application order by idApplication limit 5;
+-- OR
+select * from (select * from application order by idApplication desc) as a order by idApplication limit 5;
+
+-- 5.Вивести усіх клієнтів, чиє прізвище закінчується на OV чи OVA. iv or iva
+select * from client where LastName like '%iv' or LastName like '%iva';
+
+-- 6.Вивести клієнтів банку, які обслуговуються київськими відділеннями.
