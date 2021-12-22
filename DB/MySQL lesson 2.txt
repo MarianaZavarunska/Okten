@@ -1,8 +1,3 @@
-show databases;
-use zavarunska;
-show tables;
-select * from client;
-
 -- 1.Вибрати усіх клієнтів, чиє ім'я має менше ніж 6 символів.
 select * from client where char_length(FirstName) < 6;
 
@@ -21,3 +16,62 @@ select * from (select * from application order by idApplication desc) as a order
 select * from client where LastName like '%iv' or LastName like '%iva';
 
 -- 6.Вивести клієнтів банку, які обслуговуються київськими відділеннями.
+select * from (select * from client c join department d on c.Department_idDepartment = d.idDepartment) as j where DepartmentCity = 'Kyiv';
+-- or
+select * from client where Depart
+select * from client where Department_idDepartment in (1,4);
+
+-- 7.Знайти унікальні імена клієнтів.
+select distinct FirstName, LastName, idClient from client;
+
+-- 8.Вивести дані про клієнтів, які мають кредит більше ніж на 5000 тисяч гривень.
+
+select * from (select * from client c join application a on c.idClient = a.Client_idClient) as j where sum > 5000;
+
+-- 9.Порахувати кількість клієнтів усіх відділень та лише львівських відділень.
+select sum(countOfWorkers) as LvivClient from department where DepartmentCity = 'Lviv';
+
+-- 10.Знайти кредити, які мають найбільшу суму для кожного клієнта окремо.
+select idClient, FirstName, LastName, max(Sum) from (select * from client c join application a on c.idClient = a.Client_idClient) as j group by idClient;
+
+-- 11. Визначити кількість заявок на кредит для кожного клієнта.
+select idClient, FirstName, LastName, count(idApplication) from (select * from client c join application a on c.idClient = a.Client_idClient) as j group by idClient;
+
+-- 12. Визначити найбільший та найменший кредити.
+select max(Sum), min(Sum) from application;
+
+-- 13. Порахувати кількість кредитів для клієнтів,які мають вищу освіту.
+select idClient, FirstName, LastName, Education, count(idApplication) from ( select * from client c join application a on c.idClient = a.Client_idClient) as j where Education = 'high' group by idClient;
+
+-- 14. Вивести дані про клієнта, в якого середня сума кредитів найвища.
+select FirstName, avg(Sum) as middleSum from (select * from client c join application a on c.idClient = a.Client_idClient) as j group by idClient order by middleSum desc limit 1;
+
+ment_idDepartment in (1,4);
+
+-- 7.Знайти унікальні імена клієнтів.
+select distinct FirstName, LastName, idClient from client;
+
+-- 8.Вивести дані про клієнтів, які мають кредит більше ніж на 5000 тисяч гривень.
+
+select * from (select * from client c join application a on c.idClient = a.Client_idClient) as j where sum > 5000;
+
+-- 9.Порахувати кількість клієнтів усіх відділень та лише львівських відділень.
+select sum(countOfWorkers) as LvivClient from department where DepartmentCity = 'Lviv';
+
+-- 10.Знайти кредити, які мають найбільшу суму для кожного клієнта окремо.
+select idClient, FirstName, LastName, max(Sum) from (select * from client c join application a on c.idClient = a.Client_idClient) as j group by idClient;
+
+-- 11. Визначити кількість заявок на кредит для кожного клієнта.
+select idClient, FirstName, LastName, count(idApplication) from (select * from client c join application a on c.idClient = a.Client_idClient) as j group by idClient;
+
+-- 12. Визначити найбільший та найменший кредити.
+select max(Sum), min(Sum) from application;
+
+-- 13. Порахувати кількість кредитів для клієнтів,які мають вищу освіту.
+select idClient, FirstName, LastName, Education, count(idApplication) from ( select * from client c join application a on c.idClient = a.Client_idClient) as j where Education = 'high' group by idClient;
+
+-- 14. Вивести дані про клієнта, в якого середня сума кредитів найвища.
+select FirstName, avg(Sum) as middleSum from (select * from client c join application a on c.idClient = a.Client_idClient) as j group by idClient order by middleSum desc limit 1;
+
+
+
