@@ -1,0 +1,165 @@
+db.getCollection('students').find({avgScore: 4.2}) //1
+
+db.getCollection('students').find({class: 1})  //2
+
+db.getCollection('students').find({lessons: "physics"})  //3
+
+db.getCollection('students').find({'parents.profession': 'scientist'}) //4
+
+db.getCollection('students').find({avgScore: {$gt: 4}})  //5
+
+       
+    db.getCollection('students').aggregate( 
+        [
+          {$sort : {avgScore:-1}},
+          {$limit: 1}
+        ]
+     )     //6    
+    
+          
+      db.getCollection('students').aggregate( 
+        [
+          {$sort : {avgScore:1}},
+          {$limit: 1}
+        ]
+     )         //7
+    
+    db.getCollection('students').aggregate( 
+        [
+          {$sort : {avgScore:-1}},
+          {$limit: 3}
+        ]
+     )            //8
+         
+     db.getCollection('students').aggregate( 
+        [  
+          { $group:{ 
+               _id: '$class' ,
+              avgClass: {$avg : '$avgScore'}
+                   }
+           },
+           { $group:{
+               _id: 0,
+            avgSchool: {$avg : '$avgClass'}
+                     }
+           }
+        ]
+     )        //9
+          
+              
+   db.getCollection('students').aggregate( 
+        [  
+          { $match:{ 
+              $or: [
+              {lessons: 'mathematics'},
+              {lessons: 'physics'}
+                   ]
+                  }
+           },
+                  
+           { 
+               $group:{
+                  _id: 0,
+                  avg: {$avg:'$avgScore'}
+                       }
+           }
+         ]  
+      )      //10
+           
+    db.getCollection('students').aggregate(
+       [
+           {
+               $match:{
+                   'class' : 2
+                       }
+            },
+            {
+                $group:{
+                    _id: '$class',
+                    avg:{$avg: '$avgScore'}
+                }
+            },
+            {
+                $project:{
+                    _id: 0,
+                    class: '$_id',
+                    avgScore: '$avg'
+                }
+            }
+        ]
+     )    //11
+            
+ db.getCollection('students').find({parents: {$size: 1}})   //12
+     
+     
+ db.getCollection('students').aggregate(
+      [   
+          {
+             $unwind: '$parents'
+          },
+          { $match: {
+                 $and: [
+                   
+              {'parents.profession': null},
+              {'parents.profession': null} 
+                      ] 
+                    } 
+           }
+       ] 
+    )               //13
+   
+    
+  db.getCollection('students').deleteMany({ avgScore: {$lt: 2.5} })    //14
+  
+     
+  db.getCollection('students').aggregate(
+      [   
+          {
+             $unwind: '$parents'
+          },
+          { 
+              $match: {'parents.profession': 'teacher'} 
+           },
+           {
+               $set: {'avgScore': 5}
+           }
+       ] 
+    )           //15
+   
+    db.getCollection('students').find(
+           {
+               $and:[
+                {class: {$lt: 5}},
+                {lessons: 'physics'}
+                    ]
+            }
+      )         //16
+     
+    db.getCollection('students').aggregate(
+       [
+            {
+                $group:{
+                    _id: '$class',
+                    avg:{$avg: '$avgScore'},
+                }
+            },
+            {  
+                $sort:{avg: -1} 
+            },
+            {
+                $limit:1
+            },
+            {
+                $project: { 
+                    _id: 0,
+                    class: '$_id',
+                     avg : '$avg'
+                    }
+            }   
+       ]
+     )            //17
+                    
+            
+    
+    
+    
