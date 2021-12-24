@@ -158,6 +158,18 @@ db.getCollection('students').find({avgScore: {$gt: 4}})  //5 Знайти діт
             }   
        ]
      )            //17 Знайти найуспішніший клас
+
+        db.getCollection('students').updateMany(
+       { parents:{$exists:1}, 'parents.profession': null },
+       
+       { $set: {'parents.$[parent].profession':'waiter'} },
+       
+       { 'arrayFilters': [{'parent.profession':null}] }
+   )             
+                //********** Не працюючих батьків влаштувати офіціантами (підказка: гуглимо "arrayFilters")
+
+    
+    
                     
             
     
